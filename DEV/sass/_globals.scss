@@ -1,0 +1,24 @@
+/*
+General Styles
+*/
+
+// Base & Helpers
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.visuallyhidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px; width: 1px;
+  margin: -1px; padding: 0; border: 0;
+}
