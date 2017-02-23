@@ -746,7 +746,7 @@ main {
   display: block; }
 
 .board-pass {
-  box-shadow: 0px 7px 5px -5px #BDBDBD; }
+  box-shadow: 0px 7px 5px -px #BDBDBD; }
 
 .board-pass-nav ul {
   list-style-type: none; }
