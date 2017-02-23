@@ -1,0 +1,42 @@
+@media screen and (min-width: 600px) {
+
+  .united-logo {
+    background-size: 35%, contain;
+    height: 60px;
+  }
+
+  .menu-icon {
+    color: $white;
+    font-size: 40px;
+    height: 100%;
+    top: 10px;
+  }
+
+  .top-nav {
+    ul {
+      top: 60px;
+    }
+  }
+
+  .flight-form {
+    margin-top: 1.4em;
+    .flight-radio {
+      padding-bottom: 3*1.4em;
+      label {
+        @include baseline((14/$base-font-size), 'sm');
+      }
+    }
+  }
+
+  .board-pass {
+    margin: 2*1.4em 0;
+  }
+
+  .united-ad {
+    @include padding(2, 2);
+  }
+
+  .united-footer {
+    text-align: right;
+  }
+}

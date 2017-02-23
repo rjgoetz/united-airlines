@@ -23,11 +23,17 @@ main {
   margin: 0;
 }
 
-.material-icons {
+.menu-icon {
   color: $white;
   font-size: 30px;
   height: 100%;
-  padding-top: 7px;
+  position: absolute;
+  top: 7px;
+}
+
+.rt-arrow-icon {
+  color: $united-yellow;
+  float: right;
 }
 
 .blue {
@@ -36,7 +42,8 @@ main {
 
 // modules
 .page-header {
-  background-color: $united-blue;
+  background: linear-gradient(rgba($united-blue, 0.8), $united-blue);
+  position: relative;
 }
 
 .united-logo {
@@ -46,26 +53,48 @@ main {
   background-size: 45%, contain;
   height: 45px;
   margin: 0;
-  position: relative;
   width: 100%;
-}
-
-.log-in {
-  float: left;
-  display: none;
 }
 
 .top-nav {
   position: absolute;
-  left: 15px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  i {
+    margin-left: 15px;
+  }
   ul {
     display: none;
+    background-color: $united-blue;
+    box-shadow: 0px 5px 5px 0px $united-grey;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+    top: 45px;
+    width: 100%;
+    li {
+      @extend .clearfix;
+      @include baseline(1, 'sm');
+      @include padding(0.5, 0.5);
+      border-bottom: 1px solid $united-yellow;
+      margin: 0;
+      &:last-of-type {
+        border-bottom: 0;
+      }
+      a {
+        color: $white;
+      }
+    }
   }
 }
 
 .sub-nav {
   @include padding(0.5, 0);
   background-color: $united-lt-grey;
+  box-shadow: inset 0px -10px 10px -10px $united-grey;
   ul {
     @include baseline((14/$base-font-size), 'sm');
     list-style-type: none;
@@ -127,8 +156,8 @@ main {
 
 .flight-button {
   @include padding(0.5, 0.5);
-  background-color: $united-blue;
-  border: none;
+  background: linear-gradient(rgba($united-blue, 0.8), $united-blue);  border: none;
+  box-shadow: 0px 10px 5px -5px $united-grey;
   color: $united-yellow;
   display: block;
   margin: 0 auto;
@@ -151,6 +180,10 @@ main {
   display: block;
 }
 
+.board-pass {
+  box-shadow: 0px 7px 5px -5px $united-grey;
+}
+
 .board-pass-nav {
   ul {
     list-style-type: none;
@@ -159,11 +192,15 @@ main {
       @include baseline((13/$base-font-size), 'sm');
       background-color: $united-lt-grey;
       float: left;
+      margin: 0;
       text-align: center;
       width: 50%;
       a {
         color: $united-black;
         font-weight: bold;
+      }
+      &:nth-of-type(2) {
+        box-shadow: inset 1px -1px 10px -4px $united-black;
       }
     }
     .inactive {
@@ -200,8 +237,8 @@ main {
 
 .board-pass-button {
   @include padding(0.375, 0.375);
-  background-color: $united-blue;
-  border: none;
+  background: linear-gradient(rgba($united-blue, 0.8), $united-blue);  border: none;
+  box-shadow: 0px 10px 5px -5px $united-grey;
   color: $united-yellow;
   float: left;
   margin-left: 5%;
@@ -229,13 +266,10 @@ main {
 .united-footer {
   @include padding(1, 1);
   background-color: $united-lt-grey;
+  box-shadow: inset 0px 10px 10px -10px $united-grey;
   img {
     @include padding(0, 1);
     width: 100%;
-  }
-  .width-66 {
-    margin: 0 auto;
-    width: (2/3)*100%;
   }
   ul {
     @include baseline(1, 'sm');

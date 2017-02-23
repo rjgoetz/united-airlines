@@ -410,7 +410,7 @@ General Styles
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
-.clearfix:after, .row:after {
+.clearfix:after, .row:after, .top-nav ul li:after {
   content: "";
   display: table;
   clear: both; }
@@ -478,7 +478,7 @@ div[class*="col-"] {
 .col-xs-12 {
   width: 100%; }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 600px) {
   .col-sm-1 {
     width: 8.33333%; }
 
@@ -599,17 +599,23 @@ main {
   margin-top: 0.25em;
   margin: 0; }
 
-.material-icons {
+.menu-icon {
   color: #FFF;
   font-size: 30px;
   height: 100%;
-  padding-top: 7px; }
+  position: absolute;
+  top: 7px; }
+
+.rt-arrow-icon {
+  color: #f0cc00;
+  float: right; }
 
 .blue {
   color: #005daa; }
 
 .page-header {
-  background-color: #005daa; }
+  background: linear-gradient(rgba(0, 93, 170, 0.8), #005daa);
+  position: relative; }
 
 .united-logo {
   background: url("../img/united_logo_name.png"), url("../img/united_logo_white-mark.png");
@@ -618,23 +624,45 @@ main {
   background-size: 45%, contain;
   height: 45px;
   margin: 0;
-  position: relative;
   width: 100%; }
-
-.log-in {
-  float: left;
-  display: none; }
 
 .top-nav {
   position: absolute;
-  left: 15px; }
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 100; }
+  .top-nav i {
+    margin-left: 15px; }
   .top-nav ul {
-    display: none; }
+    display: none;
+    background-color: #005daa;
+    box-shadow: 0px 5px 5px 0px #BDBDBD;
+    list-style-type: none;
+    margin: 0;
+    padding: 0 15px;
+    position: relative;
+    top: 45px;
+    width: 100%; }
+    .top-nav ul li {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: -0.25em;
+      margin-top: 0.25em;
+      padding-bottom: 0.7rem;
+      padding-top: 0.7rem;
+      border-bottom: 1px solid #f0cc00;
+      margin: 0; }
+      .top-nav ul li:last-of-type {
+        border-bottom: 0; }
+      .top-nav ul li a {
+        color: #FFF; }
 
 .sub-nav {
   padding-bottom: 0rem;
   padding-top: 0.7rem;
-  background-color: #EFEFEF; }
+  background-color: #EFEFEF;
+  box-shadow: inset 0px -10px 10px -10px #BDBDBD; }
   .sub-nav ul {
     font-size: 0.875rem;
     line-height: 1.6;
@@ -695,8 +723,9 @@ main {
 .flight-button {
   padding-bottom: 0.7rem;
   padding-top: 0.7rem;
-  background-color: #005daa;
+  background: linear-gradient(rgba(0, 93, 170, 0.8), #005daa);
   border: none;
+  box-shadow: 0px 10px 5px -5px #BDBDBD;
   color: #f0cc00;
   display: block;
   margin: 0 auto;
@@ -716,6 +745,9 @@ main {
 .form-control {
   display: block; }
 
+.board-pass {
+  box-shadow: 0px 7px 5px -5px #BDBDBD; }
+
 .board-pass-nav ul {
   list-style-type: none; }
   .board-pass-nav ul li {
@@ -727,11 +759,14 @@ main {
     margin-top: 0.41154em;
     background-color: #EFEFEF;
     float: left;
+    margin: 0;
     text-align: center;
     width: 50%; }
     .board-pass-nav ul li a {
       color: #2e2e2e;
       font-weight: bold; }
+    .board-pass-nav ul li:nth-of-type(2) {
+      box-shadow: inset 1px -1px 10px -4px #2e2e2e; }
   .board-pass-nav ul .inactive {
     background-color: #BDBDBD; }
     .board-pass-nav ul .inactive a {
@@ -762,8 +797,9 @@ main {
 .board-pass-button {
   padding-bottom: 0.525rem;
   padding-top: 0.525rem;
-  background-color: #005daa;
+  background: linear-gradient(rgba(0, 93, 170, 0.8), #005daa);
   border: none;
+  box-shadow: 0px 10px 5px -5px #BDBDBD;
   color: #f0cc00;
   float: left;
   margin-left: 5%;
@@ -788,14 +824,12 @@ main {
 .united-footer {
   padding-bottom: 1.4rem;
   padding-top: 1.4rem;
-  background-color: #EFEFEF; }
+  background-color: #EFEFEF;
+  box-shadow: inset 0px 10px 10px -10px #BDBDBD; }
   .united-footer img {
     padding-bottom: 1.4rem;
     padding-top: 0rem;
     width: 100%; }
-  .united-footer .width-66 {
-    margin: 0 auto;
-    width: 66.66667%; }
   .united-footer ul {
     font-size: 1rem;
     line-height: 1.4;
@@ -814,5 +848,39 @@ main {
 
 .l-block {
   display: block; }
+
+@media screen and (min-width: 600px) {
+  .united-logo {
+    background-size: 35%, contain;
+    height: 60px; }
+
+  .menu-icon {
+    color: #FFF;
+    font-size: 40px;
+    height: 100%;
+    top: 10px; }
+
+  .top-nav ul {
+    top: 60px; }
+
+  .flight-form {
+    margin-top: 1.4em; }
+    .flight-form .flight-radio {
+      padding-bottom: 4.2em; }
+      .flight-form .flight-radio label {
+        font-size: 0.875rem;
+        line-height: 1.6;
+        margin-bottom: -0.35em;
+        margin-top: 0.35em; }
+
+  .board-pass {
+    margin: 2.8em 0; }
+
+  .united-ad {
+    padding-bottom: 2.8rem;
+    padding-top: 2.8rem; }
+
+  .united-footer {
+    text-align: right; } }
 
 /*# sourceMappingURL=style.css.map */
