@@ -523,7 +523,10 @@ div[class*="col-"] {
 
   .col-sm-12 {
     width: 100%; } }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
+  .col-offset-md-0 {
+    margin-left: 0; }
+
   .col-md-1 {
     width: 8.33333%; }
 
@@ -545,17 +548,26 @@ div[class*="col-"] {
   .col-md-4 {
     width: 33.33333%; }
 
+  .col-offset-md-4 {
+    margin-left: 33.33333%; }
+
   .col-md-5 {
     width: 41.66667%; }
 
   .col-md-6 {
     width: 50%; }
 
+  .col-offset-md-6 {
+    margin-left: 50%; }
+
   .col-md-7 {
     width: 58.33333%; }
 
   .col-md-8 {
     width: 66.66667%; }
+
+  .col-offset-md-8 {
+    margin-left: 66.66667%; }
 
   .col-md-9 {
     width: 75%; }
@@ -568,15 +580,36 @@ div[class*="col-"] {
 
   .col-md-12 {
     width: 100%; } }
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 1024px) {
   .col-offset-lg-1 {
     margin-left: 8.33333%; }
 
   .col-offset-lg-2 {
     margin-left: 16.66667%; }
 
+  .col-lg-2 {
+    width: 16.66667%; }
+
+  .col-lg-5 {
+    width: 41.66667%; }
+
   .col-lg-6 {
-    width: 50%; } }
+    width: 50%; }
+
+  .col-lg-3 {
+    width: 25%; }
+
+  .col-lg-4 {
+    width: 33.33333%; }
+
+  .col-lg-8 {
+    width: 66.66667%; }
+
+  .col-lg-9 {
+    width: 75%; }
+
+  .col-lg-10 {
+    width: 83.33333%; } }
 body {
   color: #2e2e2e; }
 
@@ -805,6 +838,9 @@ main {
   margin-left: 5%;
   width: 15%; }
 
+.login-form {
+  display: none; }
+
 .united-ad {
   padding-bottom: 1.4rem;
   padding-top: 1.4rem; }
@@ -820,6 +856,9 @@ main {
       text-align: center;
       transform: translateY(-50%);
       width: 100%; }
+
+.united-ad-md {
+  display: none; }
 
 .united-footer {
   padding-bottom: 1.4rem;
@@ -882,5 +921,147 @@ main {
 
   .united-footer {
     text-align: right; } }
+@media screen and (min-width: 768px) {
+  html {
+    background-color: #EFEFEF;
+    background: url("../img/icelandair.jpg") no-repeat;
+    background-size: cover;
+    background-position: right; }
+
+  h2 {
+    font-size: 1.25rem;
+    line-height: 1.12;
+    margin-bottom: -0.11em;
+    margin-top: 0.11em;
+    color: #005daa;
+    font-weight: normal; }
+
+  .l-pad-top {
+    padding-bottom: 0rem;
+    padding-top: 2.1rem; }
+
+  main {
+    background: linear-gradient(45deg, rgba(0, 93, 170, 0.75), rgba(240, 204, 0, 0.1)); }
+
+  .flight-form {
+    padding: 15px; }
+
+  .united-logo {
+    background: url("../img/united_logo_white.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 22%;
+    height: 100px; }
+
+  .menu-icon {
+    display: none; }
+
+  .top-nav ul {
+    background-color: transparent;
+    box-shadow: none;
+    display: block;
+    padding: 0;
+    top: 35px; }
+    .top-nav ul li {
+      font-size: 0.8125rem;
+      line-height: 1.72308;
+      margin-bottom: -0.41154em;
+      margin-top: 0.41154em;
+      border-bottom: none;
+      display: inline-block;
+      padding: 0;
+      text-align: center;
+      width: 15%; }
+      .top-nav ul li:first-of-type {
+        display: none; }
+      .top-nav ul li i {
+        display: none; }
+
+  .united-ad {
+    display: none; }
+
+  .login-form {
+    padding-bottom: 1.4rem;
+    padding-top: 0.7rem;
+    display: block;
+    margin-top: 1.4em;
+    padding-top: 0; }
+    .login-form .sign-in-bg {
+      background-color: #EFEFEF;
+      padding: 15px; }
+    .login-form label {
+      font-size: 1.3125rem;
+      line-height: 1.06667;
+      margin-bottom: -0.08333em;
+      margin-top: 0.08333em;
+      color: #005daa; }
+    .login-form .flight-input {
+      padding-bottom: 0.525rem;
+      padding-top: 0.525rem;
+      border: none;
+      border-bottom: 5px solid #BDBDBD;
+      color: #2e2e2e;
+      padding-left: 5px;
+      width: 100%; }
+    .login-form p {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: -0.25em;
+      margin-top: 0.25em; }
+      .login-form p a {
+        color: #005daa; }
+
+  .board-pass {
+    margin: 1.4em 0; }
+
+  .sign-in-button {
+    padding-bottom: 0.525rem;
+    padding-top: 0.525rem;
+    background: linear-gradient(rgba(0, 93, 170, 0.8), #005daa);
+    border: none;
+    box-shadow: 0px 10px 5px -5px #BDBDBD;
+    color: #f0cc00;
+    float: right;
+    margin-left: 5%;
+    width: 50%; }
+
+  .united-ad-md {
+    display: block;
+    padding-bottom: 1.4rem;
+    padding-top: 1.4rem; }
+    .united-ad-md .box {
+      background-color: #BDBDBD;
+      height: 150px;
+      position: relative; }
+      .united-ad-md .box p {
+        color: #EFEFEF;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        transform: translateY(-50%);
+        width: 100%; } }
+@media screen and (min-width: 1024px) {
+  main {
+    background: linear-gradient(45deg, rgba(0, 93, 170, 0.75), rgba(240, 204, 0, 0.25));
+    width: 1024px; }
+
+  .united-logo {
+    height: 120px; }
+
+  .top-nav ul {
+    top: 45px; }
+    .top-nav ul li {
+      font-size: 1rem;
+      line-height: 1.4;
+      margin-bottom: -0.25em;
+      margin-top: 0.25em; }
+
+  .wrap {
+    margin: 0 auto;
+    width: 1024px; }
+
+  .flight-form {
+    padding: 15px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,4 +1,129 @@
 @media screen and (min-width: 768px) {
+  html {
+    background-color: $united-lt-grey;
+    background: url('../img/icelandair.jpg') no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
 
-  
+  h2 {
+    @include baseline((20/$base-font-size), 'sm');
+    color: $united-blue;
+    font-weight: normal;
+  }
+
+  .l-pad-top {
+    @include padding(1.5, 0);
+  }
+
+  main {
+    background: linear-gradient(45deg, rgba($united-blue, 0.75), rgba($united-yellow, 0.10));
+  }
+
+  .flight-form {
+    padding: 15px;
+  }
+
+  .united-logo {
+    background: url('../img/united_logo_white.png');
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 22%;
+    height: 100px;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  .top-nav {
+    ul {
+      background-color: transparent;
+      box-shadow: none;
+      display: block;
+      padding: 0;
+      top: 35px;
+      li {
+        @include baseline((13/$base-font-size), 'sm');
+        border-bottom: none;
+        display: inline-block;
+        padding: 0;
+        text-align: center;
+        width: 15%;
+        &:first-of-type {
+          display: none;
+        }
+        i {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .united-ad {
+    display: none;
+  }
+
+  .login-form {
+    @include padding(0.5, 1);
+    display: block;
+    margin-top: 1.4em;
+    padding-top: 0;
+    .sign-in-bg {
+      background-color: $united-lt-grey;
+      padding: 15px;
+    }
+    label {
+      @include baseline((21/$base-font-size), 'sm');
+      color: $united-blue;
+    }
+    .flight-input {
+      @include padding(0.375, 0.375);
+      border: none;
+      border-bottom: 5px solid $united-grey;
+      color: $united-black;
+      padding-left: 5px;
+      width: 100%;
+    }
+    p {
+      @include baseline(1, 'sm');
+      a {
+        color: $united-blue;
+      }
+    }
+  }
+
+  .board-pass {
+    margin: 1.4em 0;
+  }
+
+  .sign-in-button {
+    @include padding(0.375, 0.375);
+    background: linear-gradient(rgba($united-blue, 0.8), $united-blue);  border: none;
+    box-shadow: 0px 10px 5px -5px $united-grey;
+    color: $united-yellow;
+    float: right;
+    margin-left: 5%;
+    width: 50%;
+  }
+
+  .united-ad-md {
+    display: block;
+    @include padding(1, 1);
+    .box {
+      background-color: $united-grey;
+      height: 150px;
+      position: relative;
+      p {
+        color: $united-lt-grey;
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        text-align: center;
+        transform: translateY(-50%);
+        width: 100%;
+      }
+    }
+  }
+
 }

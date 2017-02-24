@@ -245,6 +245,10 @@ main {
   width: 15%;
 }
 
+.login-form {
+  display: none;
+}
+
 .united-ad {
   @include padding(1, 1);
   .box {
@@ -261,6 +265,10 @@ main {
       width: 100%;
     }
   }
+}
+
+.united-ad-md {
+  display: none;
 }
 
 .united-footer {

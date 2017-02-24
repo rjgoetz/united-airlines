@@ -1,0 +1,30 @@
+@media screen and (min-width: 1024px) {
+
+  main {
+    background: linear-gradient(45deg, rgba($united-blue, 0.75), rgba($united-yellow, 0.25));
+    width: 1024px;
+  }
+
+  .united-logo {
+    height: 120px;
+  }
+
+    .top-nav {
+    ul {
+      top: 45px;
+      li {
+        @include baseline((16/$base-font-size), 'sm');
+      }
+    }
+  }
+
+  .wrap {
+    margin: 0 auto;
+    width: 1024px;
+  }
+
+  .flight-form {
+    padding: 15px;
+  }
+
+}
